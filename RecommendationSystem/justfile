@@ -2,5 +2,9 @@ shell:
     poetry shell
 test-extract:
     poetry run python web_scraping/video_search.py
+extract-statistics:
+    poetry run python data_pipeline/ingestion/get_video_interactions.py
 video-processing:
-    poetry run python data_processing/extract_video_title.py
+    poetry run python data_pipeline/ingestion/extract_video_attributes.py
+silver-processing:
+    poetry run python data_pipeline/processing/video_attributes_from_bronze_to_silver.py

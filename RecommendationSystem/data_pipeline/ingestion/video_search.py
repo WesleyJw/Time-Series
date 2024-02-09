@@ -1,19 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Sample Python code for youtube.search.list
-# See instructions for running these code samples locally:
-# https://developers.google.com/explorer-help/code-samples#python
-
 import os
-import pandas as pd
 from datetime import datetime
 import json
 
 import googleapiclient.discovery
 import googleapiclient.errors
 from google_auth_oauthlib.flow import InstalledAppFlow
-
-scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
 def youtube_authentication():
     # Disable OAuthlib's HTTPS verification when running locally.
