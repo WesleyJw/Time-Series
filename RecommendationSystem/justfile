@@ -1,0 +1,4 @@
+shell:
+    poetry shell
+test-extract:
+    poetry run python web_scraping/video_search.py

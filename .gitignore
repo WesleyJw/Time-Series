@@ -2,3 +2,10 @@ datasets/
 timeseries/
 .ipynb_checkpoints/
 ForecastPriceGE/support_code.py
+
+# Recommendation sytem
+RecommendationSystem/dataset/
+RecommendationSystem/web_scraping/.env
+RecommendationSystem/web_scraping/secrets/*
+RecommendationSystem/web_scraping/coleta_de_dados_search.ipynb
+RecommendationSystem/web_scraping/extrator_novo.ipynb

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ytrecommendsystem"
+version = "0.0.0"
+description = "A video recommendation system from youtube"
+authors = ["wesleyjw"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "1.5"
+python-dotenv = "^1.0.1"
+google-api-python-client = "2.116.0"
+google-auth-oauthlib = "1.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
