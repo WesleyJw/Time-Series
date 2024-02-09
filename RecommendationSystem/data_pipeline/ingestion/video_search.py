@@ -3,6 +3,8 @@
 import os
 from datetime import datetime
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 import googleapiclient.discovery
 import googleapiclient.errors
@@ -70,7 +72,7 @@ def get_video(queries):
         
         save_data(response, query, path_landing)
         
-        for i in range(0, 4):
+        for i in range(0, 10):
             token = response.get("nextPageToken")
             response = video_search(token, query, youtube)
         

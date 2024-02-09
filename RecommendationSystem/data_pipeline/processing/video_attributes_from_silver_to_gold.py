@@ -12,6 +12,6 @@ def gold_processing(silver_file_path, gold_path):
     data.to_parquet(f"{gold_path}/gold_video_attributes_{current_time}.parquet", index=False)
     
 if __name__=="__main__":
-    silver_file_path = "dataset/silver/silver_video_attributes_2024-02-09 09:24:15.parquet"
+    silver_file_path = "dataset/silver/silver_video_attributes_2024-02-09 15:29:46.parquet"
     gold_path = "dataset/gold"
     gold_processing(silver_file_path, gold_path)
