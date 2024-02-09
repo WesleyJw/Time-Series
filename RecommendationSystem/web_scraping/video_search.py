@@ -9,7 +9,6 @@ import pandas as pd
 from datetime import datetime
 import json
 
-import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -23,7 +22,7 @@ def youtube_authentication():
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "./web_scraping/secrets/client_secret_557895431029-2tolo18o0md2k4j2tatfl20oaiqg6fgp.apps.googleusercontent.com.json"
+    client_secrets_file = os.environ["CLIENT_SECRET_FILE"]
     scopes = ["https://www.googleapis.com/auth/youtube.readonly"] 
     # Get credentials and create an API client
     #flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
@@ -60,15 +59,6 @@ def video_search(token, query, youtube):
         return response
 
 
-
-def processing_data(response):
-    try:
-        data = pd.json_normalize(response.get("items"))[["id.kind", "id.videoId", "id.playlistId", "snippet.publishedAt", "snippet.channelId", "snippet.title", "snippet.channelTitle", "snippet.liveBroadcastContent"]]
-    except KeyError:
-        data = pd.json_normalize(response.get("items"))[["id.kind", "id.videoId", "snippet.publishedAt", "snippet.channelId", "snippet.title", "snippet.channelTitle", "snippet.liveBroadcastContent"]]
-        
-    return data
-
 def save_data(data, query, path):
 
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -94,7 +84,6 @@ def get_video(queries):
 
             save_data(response, query, path_landing)
 
-    return "ok"
 
 if __name__ == "__main__":
     queries = ["learning", "data+science", "kaggle"]
