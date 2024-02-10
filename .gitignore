@@ -4,8 +4,10 @@ timeseries/
 ForecastPriceGE/support_code.py
 
 # Recommendation sytem
+__pycache__/
 RecommendationSystem/dataset/
-RecommendationSystem/web_scraping/.env
-RecommendationSystem/web_scraping/secrets/*
-RecommendationSystem/web_scraping/coleta_de_dados_search.ipynb
-RecommendationSystem/web_scraping/extrator_novo.ipynb
+RecommendationSystem/data_pipeline/ingestion/.env
+RecommendationSystem/data_pipeline/ingestion/secrets/*
+RecommendationSystem/data_pipeline/ingestion/*.ipynb
+RecommendationSystem/data_science/processing/*.ipynb
+
