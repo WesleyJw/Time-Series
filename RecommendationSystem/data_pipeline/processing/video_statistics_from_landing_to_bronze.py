@@ -46,7 +46,7 @@ def statistics_table(landing_path, bronze_path):
     
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     df["processing_time"] = current_time
-    df.to_parquet(f"{bronze_path}tatisctcs_table_{current_time}.parquet", index = False)
+    df.to_parquet(f"{bronze_path}statisctcs_table_{current_time}.parquet", index = False)
 
 if __name__=="__main__":
     landing_path = "dataset/landing/videos/"
