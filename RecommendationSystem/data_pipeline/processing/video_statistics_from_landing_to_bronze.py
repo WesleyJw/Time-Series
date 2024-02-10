@@ -1,7 +1,5 @@
 import os
 import pandas as pd
-import numpy as np
-import json
 from datetime import datetime
 from extract_video_attributes import read_json
 
@@ -30,13 +28,29 @@ def snippet_table(landing_path, bronze_path):
     
     df_snippet.to_parquet(f"{bronze_path}snippet_table_{current_time}.parquet", index=False)
         
+def statistics_table(landing_path, bronze_path):
+    file_paths = os.listdir(landing_path)
     
+    df = pd.DataFrame()
+    for file in file_paths:
+        response = read_json(directory_path=landing_path, file_path=file)
+        
+        df_statistic = pd.DataFrame()
+           
+        for item in response.get("items"):
+            del item["snippet"]
+            df_temp = pd.json_normalize(item)
+            df_statistic = pd.concat([df_statistic, df_temp])
+        
+        df = pd.concat([df, df_statistic])
     
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    df["processing_time"] = current_time
+    df.to_parquet(f"{bronze_path}tatisctcs_table_{current_time}.parquet", index = False)
 
 if __name__=="__main__":
     landing_path = "dataset/landing/videos/"
     bronze_path = "dataset/bronze/"
-    
-    print(pd.read_parquet("dataset/bronze/snippet_table_2024-02-09 18:08:36.parquet").head())
-    print(pd.read_parquet("dataset/bronze/snippet_table_2024-02-09 18:08:36.parquet").shape)
+    statistics_table(landing_path, bronze_path)
+    #print(pd.json_normalize(res))
     #print(snippet_table(response))
