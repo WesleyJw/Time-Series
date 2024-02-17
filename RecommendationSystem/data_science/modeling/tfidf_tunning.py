@@ -20,9 +20,6 @@ import graphviz
 
 from scipy.sparse import hstack, vstack
 
-pd.set_option("display.max_columns", 30)
-%matplotlib inline
-
 # %%
 
 # Loading data
