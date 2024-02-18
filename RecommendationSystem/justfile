@@ -14,3 +14,5 @@ bronze-statistics:
     poetry run python data_pipeline/processing/video_statistics_from_landing_to_bronze.py
 silver-statistics:
     poetry run python data_pipeline/processing/video_statistics_from_bronze_to_silver.py
+dash:
+    poetry run python app/app.py
