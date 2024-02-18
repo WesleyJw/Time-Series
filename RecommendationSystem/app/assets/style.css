@@ -31,13 +31,78 @@ body {
 .body_div {
     width: 100%;
     background: #1A233C;
-    margin-top: 70px;
-    min-height: 480px;
+    margin-top: 30px;
+    min-height: 520px;
+    padding-top: 1px;
+}
+
+.stats-div {
+    display: flex;
+    width: 100%;
 }
 
 .render_div {
+    width: 740px;
+    height: 350px;
+    background: #536E90;
+    border-radius: 25px;
+    margin: 20px;
+    margin-top: 20px;
+}
+
+.stats-group {
+    width: 500px;
+    height: 350px;
+}
+
+.search-video {
+    width: 500px;
+    height: 80px;
+    background: #536E90;
+    border-radius: 45px;
+}
+
+.stats-blocks {
+    display: flex;
     width: 100%;
-    background: #1A233C;
-    margin-top: 140px;
-    min-height: 680px;
+}
+
+.card-stats {
+    float: left;
+    width: 150px;
+    height: 100px;
+    background: #FF8F08;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+.card-views {
+    float: left;
+    width: 150px;
+    height: 100px;
+    background: #32A7E2;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 25px;
+}
+
+.likes-block {
+    width: 100%;
+}
+
+.card-group {
+    width: 99%;
+    height: 130px;
+    margin-top: -10px;
+    padding-left: 10px;
+}
+
+.card-mini {
+    float: left;
+    width: 236px;
+    height: 110px;
+    margin: 10px;
+    background: #536E90;
+    border-radius: 25px;
 }
