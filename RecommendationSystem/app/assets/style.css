@@ -60,10 +60,33 @@ body {
     height: 80px;
     background: #536E90;
     border-radius: 45px;
+    margin-top: 20px;
 
     background-image: url('../assets/img/video-search.svg');
     background-repeat: no-repeat;
     background-position: top 50% left 95%;
+}
+
+.dropdown-search {
+    padding: 20px;
+    width: 85%;
+
+    /* Font Family */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 10px; 
+}
+
+.Select-control {
+    background-color: #536E90 !important;
+    color:white;
+  }
+  
+.Select-menu-outer {
+    background-color: #536E90 ;
+    color: white;
 }
 
 .stats-blocks {

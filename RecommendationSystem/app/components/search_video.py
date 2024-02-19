@@ -1,10 +1,15 @@
-from dash import html
+from dash import html, dcc
 
 def search():
     
     return html.Div(
                 [
-                    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
+                    dcc.Dropdown(
+                        ["Kagle", "Learning", "Data Science"],
+                        "Data Science",
+                        id="dropdown-search-id",
+                        className="dropdown-search"
+                    )
                 ],
                 className="search-video"
             )

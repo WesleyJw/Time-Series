@@ -6,5 +6,6 @@ def render():
                 [
                     html.H1(children='Title of Dash App', style={'textAlign':'center'}),
                 ],
+                id="render-div-id",
                 className="render_div"
             )
