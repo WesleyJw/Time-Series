@@ -60,6 +60,10 @@ body {
     height: 80px;
     background: #536E90;
     border-radius: 45px;
+
+    background-image: url('../assets/img/video-search.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left 95%;
 }
 
 .stats-blocks {
@@ -75,6 +79,10 @@ body {
     margin: 10px;
     margin-top: 20px;
     border-radius: 25px;
+
+    background-image: url('../assets/img/big-like.svg');
+    background-repeat: no-repeat;
+    background-position: top 10% left 95%;
 }
 
 .card-views {
@@ -85,10 +93,68 @@ body {
     margin: 10px;
     margin-top: 20px;
     border-radius: 25px;
+
+    background-image: url('../assets/img/views.svg');
+    background-repeat: no-repeat;
+    background-position: top 10% left 95%;
 }
 
-.likes-block {
+.like-btn {
+    cursor: pointer;
+    width: 48%;
+    height: 50px;
+    
+    /* Colors */
+    border: None;
+    background: #3AADE3;
+    border-radius: 25px;
+    background-image: url('../assets/img/uiw_like-o.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left 90%;
+
+    /* Font Family */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 10px; 
+}
+
+.deslike-btn {
+    cursor: pointer;
+    width: 48%;
+    height: 50px;
+    margin-left: 10px;
+    
+    /* Colors */
+    border: None;
+    background: #F55418;
+    border-radius: 25px;
+    background-image: url('../assets/img/uiw_dislike-o.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left 90%;
+
+    /* Font Family */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem; 
+}
+
+.card-likes {
+    padding-top: 10px;
+}
+
+.speed-video {
     width: 100%;
+    height: 50px;
+    background: #313E61;
+    border-style: solid;
+    border-color: #536E90;
+    border-radius: 25px;
+    border-width: .1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .card-group {
