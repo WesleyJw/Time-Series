@@ -172,3 +172,13 @@ body {
     background: #536E90;
     border-radius: 25px;
 }
+
+.title {
+    /* Font Family */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-top: 1%;
+    color: #FFFFFF;
+}
