@@ -31,7 +31,7 @@ body {
 .body_div {
     width: 100%;
     background: #1A233C;
-    margin-top: 30px;
+    margin-top: 15px;
     min-height: 520px;
     padding-top: 1px;
 }
@@ -203,5 +203,7 @@ body {
     font-weight: 700;
     font-size: 2rem;
     padding-top: 1%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     color: #FFFFFF;
 }
