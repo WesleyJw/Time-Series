@@ -16,3 +16,7 @@ silver-statistics:
     poetry run python data_pipeline/processing/video_statistics_from_bronze_to_silver.py
 dash:
     poetry run python app/app.py
+app-video:
+    poetry run python app/src/video_classification.py
+app-stats:
+    poetry run python app/src/get_videos_interactions.py
