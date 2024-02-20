@@ -5,8 +5,8 @@ import json
 from dotenv import load_dotenv
 load_dotenv()
 
-from get_videos import youtube_authentication, video_search
-
+#from get_videos import youtube_authentication, video_search
+from src.get_videos import youtube_authentication, video_search
 
 def statistic_extract(response, youtube):
     
@@ -49,7 +49,11 @@ def statistics_table(response):
     
     return df_statistic
 
-def merge_tables(response):
+def video_table(query):
+    
+    youtube = youtube_authentication()
+    response = video_search(query, youtube)
+    response = statistic_extract(response, youtube)
     
     table_snippet = snippet_table(response)
     table_stats = statistics_table(response)
@@ -60,9 +64,6 @@ def merge_tables(response):
     return df
 
 if __name__ == "__main__":
-    youtube = youtube_authentication()
     query = ["data+science"]
-    response = video_search(query, youtube)
-    response = statistic_extract(response, youtube)
-    print(merge_tables(response))
+    print(video_table(query))
 

@@ -5,7 +5,8 @@ from datetime import datetime, timezone
 from dotenv import load_dotenv
 load_dotenv()
 
-from get_videos import video_search, clean_data
+#from get_videos_interactions import video_table
+from src.get_videos_interactions import video_table
 
 def processing_data(df):
     
@@ -22,7 +23,8 @@ def processing_data(df):
     features = pd.DataFrame(index=df_clean.index)
     current_time = datetime.now(timezone.utc)
     features["time_since_pub"] = (pd.to_datetime(current_time) - df_clean["publishedAt"]) / np.timedelta64(1, "D")
-    features["views"] = df_clean["statistics.viewCount"]
+    features["views"] = df_clean["statistics.viewCount"].astype(int)
+    features['title'] = df_clean['title']
     features["views_by_day"] = features["views"] / features["time_since_pub"]
     features = features.drop(["time_since_pub"], axis=1)
     
@@ -30,7 +32,7 @@ def processing_data(df):
 
 if __name__=="__main__":
     query = ["data+science"]
-    response = video_search(query)
-    data = clean_data(response)
+    data = video_table(query)
+    print(data.head())
     print(processing_data(data))
     
