@@ -1,7 +1,13 @@
 from dash import Input, Output
 from dash.exceptions import PreventUpdate
+import dash_player as dp
 
-from src import get_videos_interactions, video_processing_data
+import pandas as pd
+import joblib as jb
+
+from scipy.sparse import hstack, csr_matrix
+
+from src import video_forecast
 
 def search_video(app):
     @app.callback(
@@ -10,8 +16,18 @@ def search_video(app):
     )
     def update_video(value):
         
-        data = get_videos_interactions.video_table([value.lower().replace(" ", "+")])
+        data = video_forecast.compute_prediction(value.lower().replace(" ", "+")).sort_values(by=["forecast"], ascending=False).reset_index(drop=True)
+        video_id = data["video_id"][0]
+        # statistics.viewCount
+        # statistics.likeCount
+        # statistics.commentCount
         
-        data = video_processing_data.processing_data(data)
-        print(value.lower().replace(" ", "+"))
-        return 'test'
+        video_player = dp.DashPlayer(
+                                id="player",
+                                url=f"https://youtu.be/{video_id}",
+                                controls=True,
+                                width="100%",
+                                height="100%",
+                            ),
+        print(data.head())
+        return video_player

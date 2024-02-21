@@ -20,3 +20,5 @@ app-video:
     poetry run python app/src/video_classification.py
 app-stats:
     poetry run python app/src/get_videos_interactions.py
+app-forecast:
+    poetry run python app/src/video_forecast.py
