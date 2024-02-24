@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 
 from components.video_render import render
 from components.search_video import search
-from components import card_stats, card_views, likes_buttons, video_speed
+from components import card_stats, likes_buttons, video_speed
 
 def render_block():
     
@@ -15,9 +15,9 @@ def render_block():
                             search(),
                             html.Div(
                                 [
-                                    card_views.card(),
-                                    card_stats.card(),
-                                    card_stats.card()
+                                    card_stats.card_views(),
+                                    card_stats.card_like(),
+                                    card_stats.card_comment()
                                 ],
                                 className="stats-blocks"
                             ),

@@ -94,7 +94,7 @@ body {
     width: 100%;
 }
 
-.card-stats {
+.card-like {
     float: left;
     width: 150px;
     height: 100px;
@@ -104,7 +104,23 @@ body {
     border-radius: 25px;
 
     background-image: url('../assets/img/big-like.svg');
+    background-size: 20%;
     background-repeat: no-repeat;
+    background-position: top 10% left 95%;
+}
+
+.card-comment {
+    float: left;
+    width: 150px;
+    height: 100px;
+    background: #FF8F08;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 25px;
+
+    background-image: url('../assets/img/comment.svg');
+    background-repeat: no-repeat;
+    background-size: 20%;
     background-position: top 10% left 95%;
 }
 
@@ -118,6 +134,7 @@ body {
     border-radius: 25px;
 
     background-image: url('../assets/img/views.svg');
+    background-size: 20%;
     background-repeat: no-repeat;
     background-position: top 10% left 95%;
 }
@@ -206,4 +223,32 @@ body {
     margin-bottom: 0px;
     padding-bottom: 0px;
     color: #FFFFFF;
+}
+
+/* Cards Styles*/
+
+.car-views-title {
+    /* Font Family */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: #FFFF;
+    margin-top: 10%;
+    margin-bottom: 0px;
+    padding-top: -10%;
+}
+
+.car-likes-title {
+    /* Font Family */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: 	#05014a;
+    margin-top: 10%;
+    margin-bottom: 0px;
+    padding-top: -10%;
 }

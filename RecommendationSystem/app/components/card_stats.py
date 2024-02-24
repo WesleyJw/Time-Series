@@ -1,10 +1,31 @@
 from dash import html
 
-def card():
+def card_like():
     
     return html.Div(
                 [
-                    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
+                   
                 ],
-                className="card-stats"
+                className="card-like",
+                id="card-like-id"
+            )
+
+def card_comment():
+    
+    return html.Div(
+                [
+                    
+                ],
+                className="card-comment",
+                id="card-comment-id"
+            )
+
+def card_views():
+    
+    return html.Div(
+                [
+                    
+                ],
+                className="card-views",
+                id="card-views-id"
             )

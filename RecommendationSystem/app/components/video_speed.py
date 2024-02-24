@@ -4,7 +4,7 @@ def speed():
     
     return html.Div(
                 [
-                    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
+                    html.H2(children='Do you like this video?', style={'textAlign':'center', 'margin-top': '10px'}),
                 ],
                 className="speed-video"
             )
