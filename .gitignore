@@ -6,8 +6,9 @@ ForecastPriceGE/support_code.py
 # Recommendation sytem
 __pycache__/
 RecommendationSystem/dataset/
-RecommendationSystem/data_pipeline/ingestion/.env
+RecommendationSystem/.env
 RecommendationSystem/data_pipeline/ingestion/secrets/*
 RecommendationSystem/data_pipeline/ingestion/*.ipynb
 RecommendationSystem/data_science/processing/*.ipynb
+RecommendationSystem/data_science/modeling/*.ipynb
 
