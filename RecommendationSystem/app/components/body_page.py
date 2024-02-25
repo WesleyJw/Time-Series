@@ -10,7 +10,8 @@ def body():
     return html.Div(
                 [
                     render_block(),
-                    card_block()
+                    card_block(),
+                    dcc.Store(id='intermediate-value')
                 ],
                 className="body_div"
             )

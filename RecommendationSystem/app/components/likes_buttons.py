@@ -5,14 +5,14 @@ def like_button():
     
     like_btn = dbc.Button(
         ["Like"],
-        n_clicks=None,
+        n_clicks=0,
         className="like-btn",
         id="btn-like-id"
     )
     
     deslike_btn = dbc.Button(
         ["Deslike"],
-        n_clicks=None,
+        n_clicks=0,
         className="deslike-btn",
         id="btn-deslike-id"
     )
