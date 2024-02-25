@@ -4,7 +4,7 @@ def speed():
     
     return html.Div(
                 [
-                    html.H2(children='Do you like this video?', style={'textAlign':'center', 'margin-top': '10px'}),
+                    html.H2(children='Would you like to tag this video?', style={'textAlign':'center', 'margin-top': '10px'}),
                 ],
                 className="speed-video"
             )

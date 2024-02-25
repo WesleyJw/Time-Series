@@ -12,7 +12,7 @@ app = Dash(__name__)
 app.layout = dbc.Container(
                             [
                                 html.H1(
-                                    children='Video Recommendation APP', 
+                                    children='Your personality platform of Studies Videos.', 
                                     style={'textAlign':'center'},
                                     className="title"),
                                 bp.body(),

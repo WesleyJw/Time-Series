@@ -10,10 +10,15 @@ def search_video(app):
             Output("render-div-id", "children"),
             Output("card-views-id", "children"),
             Output("card-like-id", "children"),
-            Output("card-comment-id", "children")
-         
+            Output("card-comment-id", "children"),
+            Output("mini-video-second", "children"),
+            Output("mini-video-third", "children"),
+            Output("mini-video-fourth", "children"),
+            Output("mini-video-fifth", "children"),
+            Output("mini-video-sixth", "children")
          ],
-        Input("dropdown-search-id", "value")
+        Input("dropdown-search-id", "value"),
+        PreventUpdate=True
     )
     def update_video(value):
         
@@ -47,5 +52,45 @@ def search_video(app):
             html.P("Comments", style={'textAlign':'center'})
         ])
         
+        second = dp.DashPlayer(
+                                id="player",
+                                url=f"https://youtu.be/{data['video_id'][1]}",
+                                controls=True,
+                                width="100%",
+                                height="100%",
+                            )
+        
+        third = dp.DashPlayer(
+                                id="player",
+                                url=f"https://youtu.be/{data['video_id'][2]}",
+                                controls=True,
+                                width="100%",
+                                height="100%",
+                            )
+        
+        fourth = dp.DashPlayer(
+                                id="player",
+                                url=f"https://youtu.be/{data['video_id'][3]}",
+                                controls=True,
+                                width="100%",
+                                height="100%",
+                            )
+        
+        fifth = dp.DashPlayer(
+                                id="player",
+                                url=f"https://youtu.be/{data['video_id'][4]}",
+                                controls=True,
+                                width="100%",
+                                height="100%",
+                            )
+        
+        sixth = dp.DashPlayer(
+                                id="player",
+                                url=f"https://youtu.be/{data['video_id'][5]}",
+                                controls=True,
+                                width="100%",
+                                height="100%",
+                            )
+        
         print(data.head())
-        return video_player, views_stats, likes_stats, comments_stats
+        return video_player, views_stats, likes_stats, comments_stats, second, third, fourth, fifth, sixth
